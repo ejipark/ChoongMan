@@ -1,0 +1,14 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #7FFFD4;
+}
+
+.navbar {
+	background-color: grey;
+}
+
+#logo-img {
+	width: 100px;
+	height: 100px;
+	margin: 0 15px 5px 0;
+}
