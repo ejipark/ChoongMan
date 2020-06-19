@@ -1,14 +1,226 @@
 body {
-	font-family: 'Raleway', sans-serif;
-	background-color: #7FFFD4;
+	color: #fff;
+	background-color: #000;
 }
 
+/* HEADER */
 .navbar {
-	background-color: grey;
+	font-size: .8em;
+	font-family: 'Comfortaa', cursive;
 }
 
 #logo-img {
-	width: 100px;
-	height: 100px;
-	margin: 0 15px 5px 0;
+	width: 120px;
+	height: 120px;
 }
+
+/* address next to logo */
+.nav li {
+	line-height: 2em;
+}
+
+/* phone icon next to logo */
+#icon-img {
+	width: 1.2em;
+	height: 1.2em;
+	margin-right: 2px;
+}
+
+/* phone number next to logo */
+.btn {
+	color: #DCDCDC;
+	font-size: 1em;
+	
+}
+
+.btn:hover {
+	color: white;
+}
+
+/* menu links at the right of the header */
+.navbar-nav li {
+	text-transform: uppercase;
+	padding-right: 20px;
+	text-align: right;
+}
+/* END OF HEADER */
+
+/* BODY */
+.top-tiles, .mid-tiles, .bot-tiles {
+	height: 180px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#carouselExampleIndicators {
+	margin-bottom: 20px;
+}
+
+.mid-tiles {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#menu-tile1 {
+	background: url('../images/li_menu_img1.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#menu-tile2 {
+	background: url('../images/li_menu_img2.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-right: 5px;
+}
+
+#menu-tile3 {
+	background: url('../images/li_menu_img3.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#menu-tile4 {
+	background: url('../images/li_menu_img4.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#info-tile1 {
+	background: skyblue;
+	background-position: center;
+	background-size: cover;
+	margin-right: 5px;
+}
+
+#info-tile2 {
+	background: pink;
+	background-position: center;
+	background-size: cover;
+}
+
+#map-tile {
+	background: grey;
+	background-position: center;
+	background-size: cover;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#spcs-tile {
+	background: green;
+	background-position: center;
+	background-size: cover;
+}
+
+#menu-tile1 button, #menu-tile2 button, #menu-tile3 button, #menu-tile4 button {
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+	border-radius: 20px;
+	background-color: #f4511e;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .9em;
+	width: 100px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+	bottom: 0;
+	right: 0;
+}
+
+#menu-tile1 button span, #menu-tile2 button span, #menu-tile3 button span, #menu-tile4 button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#menu-tile1 button span:after, #menu-tile2 button span:after, #menu-tile3 button span:after, #menu-tile4 button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+#menu-tile1 button:hover span, #menu-tile2 button:hover span, #menu-tile3 button:hover span, #menu-tile4 button:hover span {
+  padding-right: 15px;
+}
+
+#menu-tile1 button:hover span:after, #menu-tile2 button:hover span:after, #menu-tile3 button:hover span:after, #menu-tile4 button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* END OF BODY */
+
+/***** Large Devices Only *****/
+@media (min-width: 1200px) {
+
+}
+
+/***** Medium Devices Only *****/
+@media (min-width: 992px) and (max-width: 1199px) {
+.carousel-inner img {
+	object-fit: cover;
+	height: 300px;
+}
+}
+
+/***** Small Devices Only *****/
+@media (min-width: 768px) and (max-width: 991px) {
+.carousel-inner img {
+	object-fit: cover;
+	height: 300px;
+}
+}
+
+/***** Extra-small Devices Only *****/
+@media (max-width: 767px) {
+#logo-img {
+	width: 90px;
+	height: 90px;
+	margin-right: -4px;
+}
+
+.container {
+	font-size: .6em;
+}
+
+#icon-img {
+	width: 1.2em;
+	height: 1.2em;
+	margin-left: -2px;
+}
+
+.carousel-inner img {
+	object-fit: cover;
+	height: 200px;
+}
+
+#menu-tile2 {
+	margin-right: 0;
+}
+
+#map-tile {
+	margin-right: 0;
+}
+
+.top-tiles, .mid-tiles, .bot-tiles {
+	height: 140px;
+}
+
+#menu-tile1 button, #menu-tile2 button, #menu-tile3 button, #menu-tile4 button {
+	width: 70px;
+}
+
