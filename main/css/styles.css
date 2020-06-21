@@ -237,7 +237,7 @@ footer .nav-link { padding-right: 20px; padding-left: 5px;}
 		object-fit: cover;
 		height: 250px;
 	}
-	#page_main .r1_tiles, .r2_tiles { height: 150px;}
+	#page_main .r1_tiles, .r2_tiles { height: 160px;}
 	#page_main .r3_tiles { height: 100px;}
 	
 	.jumbotron { height: 250px;}
