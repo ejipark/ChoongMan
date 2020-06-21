@@ -1,51 +1,63 @@
 body {
 	color: #fff;
-	background-color: #000;
+	background-color: #fff;
+	max-width: 1400px;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
 }
+
+
+
 
 /* HEADER */
-.navbar {
-	font-size: .8em;
-	font-family: 'Comfortaa', cursive;
+header .navbar {
+	font-size: .9em;
+	font-weight: bold;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 10px;
 }
 
-#logo-img {
-	width: 120px;
-	height: 120px;
+/* gets rid of toggler's border */
+header .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+	border: none;
+	outline: none;
+	padding-right: 0;
 }
 
-/* address next to logo */
-.nav li {
-	line-height: 2em;
-}
+/* logo on the left of header */
+#logo_img { width: 100px;}
+#logo_text { width: 180px;}
 
-/* phone icon next to logo */
-#icon-img {
-	width: 1.2em;
-	height: 1.2em;
-	margin-right: 2px;
-}
+/* icons on the right of header */
+header .icon_sm { width: 25px;}
+header .navbar-text img { margin-right: 10px;}
 
-/* phone number next to logo */
-.btn {
-	color: #DCDCDC;
-	font-size: 1em;
-	
-}
-
-.btn:hover {
-	color: white;
-}
-
-/* menu links at the right of the header */
-.navbar-nav li {
-	text-transform: uppercase;
-	padding-right: 20px;
+/* menu links on the right of header */
+header .navbar-nav {
+	clear: right;
 	text-align: right;
-}
+	text-transform: uppercase;}
+header .navbar-nav .nav-item { padding-left: 25px;}
+
+/* menu link hover color change */
+header .navbar-nav li a:hover { color: #FF4500 !important; transition: .3s;}
+header .navbar-nav li a:active { color: #FF4500 !important;}
 /* END OF HEADER */
 
+
+
+
 /* BODY */
+section {
+	margin-bottom: 25px;
+}
+
+.carousel-inner img {
+	object-fit: cover;
+	height: 450px;
+}
+
 .top-tiles, .mid-tiles, .bot-tiles {
 	height: 180px;
 	width: 100%;
@@ -53,36 +65,22 @@ body {
 	overflow: hidden;
 }
 
-#carouselExampleIndicators {
-	margin-bottom: 20px;
-}
-
-.mid-tiles {
-	margin-top: 15px;
-	margin-bottom: 5px;
-}
-
 #menu-tile1 {
 	background: url('../images/li_menu_img1.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
-	margin-right: 5px;
-	margin-bottom: 5px;
 }
 
 #menu-tile2 {
 	background: url('../images/li_menu_img2.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
-	margin-right: 5px;
 }
 
 #menu-tile3 {
 	background: url('../images/li_menu_img3.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
-	margin-right: 5px;
-	margin-bottom: 5px;
 }
 
 #menu-tile4 {
@@ -95,7 +93,6 @@ body {
 	background: skyblue;
 	background-position: center;
 	background-size: cover;
-	margin-right: 5px;
 }
 
 #info-tile2 {
@@ -108,8 +105,6 @@ body {
 	background: grey;
 	background-position: center;
 	background-size: cover;
-	margin-right: 5px;
-	margin-bottom: 5px;
 }
 
 #spcs-tile {
@@ -117,110 +112,57 @@ body {
 	background-position: center;
 	background-size: cover;
 }
-
-#menu-tile1 button, #menu-tile2 button, #menu-tile3 button, #menu-tile4 button {
-	font-family: 'Poppins', sans-serif;
-	position: absolute;
-	border-radius: 20px;
-	background-color: #f4511e;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: .9em;
-	width: 100px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 5px;
-	bottom: 0;
-	right: 0;
-}
-
-#menu-tile1 button span, #menu-tile2 button span, #menu-tile3 button span, #menu-tile4 button span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-}
-
-#menu-tile1 button span:after, #menu-tile2 button span:after, #menu-tile3 button span:after, #menu-tile4 button span:after {
-	content: '\00bb';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
-}
-
-#menu-tile1 button:hover span, #menu-tile2 button:hover span, #menu-tile3 button:hover span, #menu-tile4 button:hover span {
-  padding-right: 15px;
-}
-
-#menu-tile1 button:hover span:after, #menu-tile2 button:hover span:after, #menu-tile3 button:hover span:after, #menu-tile4 button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
 /* END OF BODY */
 
-/***** Large Devices Only *****/
-@media (min-width: 1200px) {
+
+
+
+/* FOOTER */
+footer .nav { font-size: .7em; padding-bottom: 10px;}
+
+/* fix footer links display */
+#cp_text { color: #696969 !important;}
+footer .nav-link { padding: 0 20px 10px 5px;}
+/* END OF FOOTER */
+
+
+
+/***** Extra-large Devices Only *****/
+@media (min-width: 1200px) {file:///C:/Users/Home/choongman/main/index.html#
 
 }
 
-/***** Medium Devices Only *****/
-@media (min-width: 992px) and (max-width: 1199px) {
-.carousel-inner img {
-	object-fit: cover;
-	height: 300px;
-}
+/***** Large Devices Only (Laptop) *****/
+/***** Medium Devices Only (Tablet) *****/
+@media (max-width: 1199px) {
+	/* HEADER */
+	#logo_img { width: 80px;}
+	#logo_text { width: 160px;}file:///C:/Users/Home/choongman/main/index.html#
+	/* END OF HEADER */
+	
+	/* BODY */
+	.carousel-inner img {
+		object-fit: cover;
+		height: 350px;
+	}
+	/* END OF BODY */
 }
 
-/***** Small Devices Only *****/
-@media (min-width: 768px) and (max-width: 991px) {
-.carousel-inner img {
-	object-fit: cover;
-	height: 300px;
-}
-}
-
-/***** Extra-small Devices Only *****/
+/***** Small Devices Only (Mobile) *****/
 @media (max-width: 767px) {
-#logo-img {
-	width: 90px;
-	height: 90px;
-	margin-right: -4px;
-}
+	/* HEADER */
+	#logo_img { width: 0;}
+	#logo_text { width: 140px;}
+	
+	.navbar-text img { margin-right: 5px;}
+	.navbar-toggler { padding-left: 10px;}
+	/* END OF HEADER */
 
-.container {
-	font-size: .6em;
-}
-
-#icon-img {
-	width: 1.2em;
-	height: 1.2em;
-	margin-left: -2px;
-}
-
-.carousel-inner img {
-	object-fit: cover;
-	height: 200px;
-}
-
-#menu-tile2 {
-	margin-right: 0;
-}
-
-#map-tile {
-	margin-right: 0;
-}
-
-.top-tiles, .mid-tiles, .bot-tiles {
-	height: 140px;
-}
-
-#menu-tile1 button, #menu-tile2 button, #menu-tile3 button, #menu-tile4 button {
-	width: 70px;
+	/* BODY */
+	.carousel-inner img {
+		object-fit: cover;
+		height: 200px;
+	}
+	/* END OF BODY */
 }
 
