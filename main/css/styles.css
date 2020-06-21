@@ -6,8 +6,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-
-
+/* hover zoom in */
+a div { transition: transform .5s ease;}
+a div:hover { opacity: .6; transform: scale(.9);}
 
 /* HEADER */
 header .navbar {
@@ -26,8 +27,8 @@ header .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
 }
 
 /* logo on the left of header */
-#logo_img { width: 100px;}
-#logo_text { width: 180px;}
+header #logo_img { width: 100px;}
+header #logo_text { width: 180px;}
 
 /* icons on the right of header */
 header .icon_sm { width: 25px;}
@@ -49,62 +50,60 @@ header .navbar-nav li a:active { color: #FF4500 !important;}
 
 
 /* BODY */
-section { margin-bottom: 20px;}
-
-.carousel-inner img {
+#page_main .carousel-inner img {
 	object-fit: cover;
 	height: 450px;
 }
 
 /* assigning height to each row */
 /* map-tile has to match height */
-.r1_tiles, .r2_tiles {
+#page_main .r1_tiles, .r2_tiles {
 	height: 350px;
 	overflow: hidden;
 }
-.r3_tiles {
+#page_main .r3_tiles {
 	height: 150px;
 	overflow: hidden;
 }
 
 /* putting picture to each tile */
-#tilepic_menu1 {
+#page_main  #tilepic_menu1 {
 	height: 50%;
 	background: url('../images/img_menu1.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-#tilepic_menu2 {
+#page_main #tilepic_menu2 {
 	height: 50%;
 	background: url('../images/img_menu2.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-#tilepic_best {
+#page_main #tilepic_best {
 	height: 100%;
 	background: url('../images/img_best.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-#tilepic_offers {
+#page_main #tilepic_offers {
 	height: 100%;
 	background: url('../images/img_offers.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-#tilepic_hrs {
+#page_main #tilepic_hrs {
 	height: 50%;
 	background: url('../images/store_hrs.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-#tilepic_ct {
+#page_main #tilepic_ct {
 	height: 50%;
 	background: url('../images/contact_us.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-#tilepic_extra {
+#page_main #tilepic_extra {
 	height: 100%;
 	background: url('../images/img_extra.png') no-repeat;
 	background-position: left;
@@ -116,11 +115,9 @@ section { margin-bottom: 20px;}
 
 
 /* FOOTER */
-footer .nav { font-size: .7em; padding-bottom: 10px;}
-
-/* fix footer links display */
+footer .nav { font-size: .7em; padding-top: 20px; padding-bottom: 20px;}
+footer .nav-link { padding-right: 20px; padding-left: 5px;}
 #cp_text { color: #696969 !important;}
-footer .nav-link { padding: 0 20px 10px 5px;}
 /* END OF FOOTER */
 
 
@@ -131,35 +128,54 @@ footer .nav-link { padding: 0 20px 10px 5px;}
 }
 
 /***** Large Devices Only (Laptop) *****/
-/***** Medium Devices Only (Tablet) *****/
 @media (max-width: 1199px) {
 	/* HEADER */
-	#logo_img { width: 80px;}
-	#logo_text { width: 160px;}
+	header #logo_img { width: 80px;}
+	header #logo_text { width: 160px;}
 	/* END OF HEADER */
 	
 	/* BODY */
-	.carousel-inner img {
+	#page_main .carousel-inner img {
+		object-fit: cover;
+		height: 400px;
+	}
+	
+	#page_main .r1_tiles, .r2_tiles { height: 300px;}
+	#page_main .r3_tiles { height: 150px;}
+	/* END OF BODY */
+}
+
+/***** Medium Devices Only (Tablet) *****/
+@media (max-width: 991px) {
+	/* BODY */
+	#page_main .carousel-inner img {
 		object-fit: cover;
 		height: 350px;
 	}
+	
+	#page_main .r1_tiles, .r2_tiles { height: 250px;}
+	#page_main .r3_tiles { height: 100px;}
 	/* END OF BODY */
 }
+
 
 /***** Small Devices Only (Mobile) *****/
 @media (max-width: 767px) {
 	/* HEADER */
-	#logo_img { width: 0;}
-	#logo_text { width: 140px;}
+	header #logo_img { width: 0;}
+	header #logo_text { width: 140px;}
 	
-	.navbar-text img { margin-right: 5px;}
-	.navbar-toggler { padding-left: 10px;}
+	header .navbar-text img { margin-right: 5px;}
+	header .navbar-toggler { padding-left: 10px;}
 	/* END OF HEADER */
 
 	/* BODY */
-	.carousel-inner img {
+	#page_main .carousel-inner img {
 		object-fit: cover;
 		height: 250px;
 	}
+	
+	#page_main .r1_tiles, .r2_tiles { height: 200px;}
+	#page_main .r3_tiles { height: 100px;}
 	/* END OF BODY */
 }
