@@ -49,68 +49,66 @@ header .navbar-nav li a:active { color: #FF4500 !important;}
 
 
 /* BODY */
-section {
-	margin-bottom: 25px;
-}
+section { margin-bottom: 20px;}
 
 .carousel-inner img {
 	object-fit: cover;
 	height: 450px;
 }
 
-.top-tiles, .mid-tiles, .bot-tiles {
-	height: 180px;
-	width: 100%;
-	position: relative;
+/* assigning height to each row */
+/* map-tile has to match height */
+.r1_tiles, .r2_tiles {
+	height: 350px;
+	overflow: hidden;
+}
+.r3_tiles {
+	height: 150px;
 	overflow: hidden;
 }
 
-#menu-tile1 {
-	background: url('../images/li_menu_img1.jpg') no-repeat;
+/* putting picture to each tile */
+#tilepic_menu1 {
+	height: 50%;
+	background: url('../images/img_menu1.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-
-#menu-tile2 {
-	background: url('../images/li_menu_img2.jpg') no-repeat;
+#tilepic_menu2 {
+	height: 50%;
+	background: url('../images/img_menu2.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-
-#menu-tile3 {
-	background: url('../images/li_menu_img3.jpg') no-repeat;
+#tilepic_best {
+	height: 100%;
+	background: url('../images/img_best.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-
-#menu-tile4 {
-	background: url('../images/li_menu_img4.jpg') no-repeat;
+#tilepic_offers {
+	height: 100%;
+	background: url('../images/img_offers.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-
-#info-tile1 {
-	background: skyblue;
+#tilepic_hrs {
+	height: 50%;
+	background: url('../images/store_hrs.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-
-#info-tile2 {
-	background: pink;
+#tilepic_ct {
+	height: 50%;
+	background: url('../images/contact_us.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
-
-#map-tile {
-	background: grey;
-	background-position: center;
-	background-size: cover;
-}
-
-#spcs-tile {
-	background: green;
-	background-position: center;
-	background-size: cover;
+#tilepic_extra {
+	height: 100%;
+	background: url('../images/img_extra.png') no-repeat;
+	background-position: left;
+	background-size: contain;
 }
 /* END OF BODY */
 
@@ -128,7 +126,7 @@ footer .nav-link { padding: 0 20px 10px 5px;}
 
 
 /***** Extra-large Devices Only *****/
-@media (min-width: 1200px) {file:///C:/Users/Home/choongman/main/index.html#
+@media (min-width: 1200px) {
 
 }
 
@@ -137,7 +135,7 @@ footer .nav-link { padding: 0 20px 10px 5px;}
 @media (max-width: 1199px) {
 	/* HEADER */
 	#logo_img { width: 80px;}
-	#logo_text { width: 160px;}file:///C:/Users/Home/choongman/main/index.html#
+	#logo_text { width: 160px;}
 	/* END OF HEADER */
 	
 	/* BODY */
@@ -161,8 +159,7 @@ footer .nav-link { padding: 0 20px 10px 5px;}
 	/* BODY */
 	.carousel-inner img {
 		object-fit: cover;
-		height: 200px;
+		height: 250px;
 	}
 	/* END OF BODY */
 }
-
